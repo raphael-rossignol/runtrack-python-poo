@@ -5,10 +5,13 @@ class Livre:
         self.__nbpages = 400
         self.__disponible = True
 
-     def verification(self):
+    def get_disponible(self):
+        return self.__disponible
+
+    def verification(self):
         verification = False
 
-        if self.__disponible:
+        if self.get_disponible():
             verification = True
         return verification
 
@@ -25,7 +28,6 @@ class Livre:
         self.emprunter()
         if self.emprunter():
             self.__disponible = True
-
 
 
 livre = Livre()
